@@ -1,13 +1,13 @@
 @extends('main')
 
-@section('title', 'Service')
+@section('title', 'Product')
 
 @section('breadcrumbs')
     <div class="breadcrumbs">
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Service</h1>
+                    <h1>Product</h1>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="page-header float-right">
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
-                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Product</a></li>
                         <li class="active">Add</li>
                     </ol>
                 </div>
@@ -28,10 +28,10 @@
     <div class="card">
         <div class="card-header">
             <div class="pull-left">
-                <strong>Tambah Service</strong>
+                <strong>Tambah Product</strong>
             </div>
             <div class="pull-right">
-                <a href="{{ url('service') }}" class="btn btn-secondary btn-sm">
+                <a href="{{ url('product') }}" class="btn btn-secondary btn-sm">
                     <i class="fa fa-undo"></i> Back
                 </a>
             </div>
@@ -39,10 +39,10 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
-                    <form action="{{ url('service') }}" method="POST">
+                    <form action="{{ url('product') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label>Nama Layanan</label>
+                            <label>Nama Produk</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name')}}" autofocus>
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>

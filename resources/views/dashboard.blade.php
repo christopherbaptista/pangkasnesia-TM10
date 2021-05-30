@@ -27,7 +27,7 @@
     <div class="content mt-3">
 
         <div class="animated fadeIn">
-            Isi home
+            You're logged in!
         </div>
 
     </div>

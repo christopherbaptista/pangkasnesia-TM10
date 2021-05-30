@@ -36,7 +36,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ url('home') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{ url('dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <li>
                         <a href="{{ url('service') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Service </a>
@@ -48,7 +48,7 @@
                         <a href="{{ url('partner') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Partner </a>
                     </li>
                     <li>
-                        <a href="{{ url('user') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>User </a>
+                        <a href="{{ url('member') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Member </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

@@ -1,13 +1,13 @@
 @extends('main')
 
-@section('title', 'Service')
+@section('title', 'Product')
 
 @section('breadcrumbs')
     <div class="breadcrumbs">
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Service</h1>
+                    <h1>Product</h1>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
             <div class="page-header float-right">
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
-                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Product</a></li>
                         <li class="active">Data</li>
                     </ol>
                 </div>
@@ -40,10 +40,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="pull-left">
-                        <strong>Data Service</strong>
+                        <strong>Data Product</strong>
                     </div>
                     <div class="pull-right">
-                        <a href="{{ url('service/add') }}" class="btn btn-success btn-sm">
+                        <a href="{{ url('product/add') }}" class="btn btn-success btn-sm">
                         <i class="fa fa-plus"></i> Add
                         </a>
                     </div>
@@ -53,7 +53,7 @@
                        <thead>
                            <tr>
                                 <th>No.</th>
-                                <th>Nama Layanan</th>
+                                <th>Nama Produk</th>
                                 <th>Kategori</th>
                                 <th>Deskripsi</th>
                                 <th>Harga</th>
@@ -61,7 +61,7 @@
                            </tr>
                        </thead>
                        <tbody>
-                           @foreach ($service as $item)
+                           @foreach ($product as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->name }}</td>
@@ -69,10 +69,10 @@
                                     <td>{{ $item->description }}</td>
                                     <td>{{ $item->price }}</td>
                                     <td class="text-center">
-                                        <a href="{{ url('service/edit/' .$item->id) }}" class="btn btn-primary btn-sm">
+                                        <a href="{{ url('product/edit/' .$item->id) }}" class="btn btn-primary btn-sm">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <form action="{{ url('service/' .$item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Hapus data?')">
+                                        <form action="{{ url('product/' .$item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Hapus data?')">
                                             @method('delete')
                                             @csrf
                                             <button class="btn btn-danger btn-sm">

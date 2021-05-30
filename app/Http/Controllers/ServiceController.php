@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\StoreService;
 
 class ServiceController extends Controller
 {
@@ -11,9 +12,7 @@ class ServiceController extends Controller
     {
         $service = DB::table('service')->get();
 
-        // return $layanan;
         return view('service.data', ['service' => $service]);
-        // return view('service.data', compact('service'));
     }
 
     public function add()
@@ -21,8 +20,10 @@ class ServiceController extends Controller
         return view('service.add');
     }
 
-    public function addProcess(Request $request) 
+    public function addProcess(StoreService $request) 
     {
+        // $validatedData = $request->validate();
+
         DB::table('service')->insert([
             'name' => $request->name,
             'category' => $request->category,
@@ -30,5 +31,31 @@ class ServiceController extends Controller
             'price' => $request->price,
         ]);
         return redirect('service')->with('status', 'Data berhasil ditambahkan!');
+    }
+
+    public function edit($id)
+    {
+        $service = DB::table('service')->where('id', $id)->first();
+        return view('service/edit', compact('service'));
+    }
+
+    public function editProcess(StoreService $request, $id) 
+    {
+        // $validatedData = $request->validate();
+        
+        DB::table('service')->where('id', $id)
+            ->update([
+                'name' => $request->name,
+                'category' => $request->category,
+                'description' => $request->description,
+                'price' => $request->price,
+            ]);
+        return redirect('service')->with('status', 'Data berhasil diupdate!');
+    }
+
+    public function delete($id)
+    {
+        DB::table('service')->where('id', $id)->delete();
+        return redirect('service')->with('status', 'Data berhasil dihapus!');
     }
 }
