@@ -19,7 +19,7 @@ class CreateServiceTable extends Migration
             $table->string('category');
             $table->longText('description')->nullable();
             $table->decimal('price', 9, 2);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 
