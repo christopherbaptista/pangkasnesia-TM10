@@ -10,9 +10,9 @@ Route::get('/', function () {
 
     // Untuk assign role ke akun user (register)
 
-    // auth()->user()->assignRole('admin');
+    auth()->user()->assignRole('admin');
     // auth()->user()->assignRole('partner');
-    return view('welcome', ['title' => 'Pangkasnesia']);
+    // return view('welcome', ['title' => 'Pangkasnesia']);
 });
 
 Route::get('/dashboard', function () {

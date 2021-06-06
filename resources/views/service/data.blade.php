@@ -26,7 +26,7 @@
 
 @section('content')
 
-    
+
     <div class="content mt-3">
 
         <div class="animated fadeIn">
@@ -81,15 +81,15 @@
                                         </form>
                                     </td>
                                 </tr>
-                               
+
                            @endforeach
                        </tbody>
                    </table>
                 </div>
-        
+
         </div>
     </div>
 
-    
+
     </div>
 @endsection
