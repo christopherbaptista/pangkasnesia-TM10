@@ -74,7 +74,7 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         @role('admin')
-                            Admin Panel
+                            Admin Panel |
                         @endrole
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
                         <div class="user-menu dropdown-menu">

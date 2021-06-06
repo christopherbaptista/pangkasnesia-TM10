@@ -79,6 +79,9 @@
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </form>
+                                        <a href="{{ url('qrcode') }}" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-money"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                
